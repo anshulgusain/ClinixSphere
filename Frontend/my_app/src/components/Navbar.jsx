@@ -2,7 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "../css/navbar.css"
 import Hamburger from "./logo.jsx";
-import { FaSearch } from "react-icons/fa";
+
 
 
 
@@ -37,10 +37,7 @@ const Navbar = () => {
               <NavLink to="/about">About</NavLink>
             </li>
 
-            <li>
-              <input type="text" placeholder="Search by id" className="search" />
-              <button className="search-button"><FaSearch /></button>
-            </li>
+            
             {/* <li>
               <NavLink to="/contact">Contact</NavLink>
             </li> */}

@@ -21,10 +21,10 @@ const Edit=()=> {
 const navigate=useNavigate()
 
   const [error, setError] = useState(false)
-  const [name, setName] = useState("")
-  const [date, setDate] = useState("")
-  const [bloodPressure, setbloodPressure] = useState("")
-  const [heartRate, setHeartRate] = useState("")
+  const [name, setName] = useState(nam)
+  const [date, setDate] = useState(dat)
+  const [bloodPressure, setbloodPressure] = useState(bp)
+  const [heartRate, setHeartRate] = useState(hr)
 
 
 

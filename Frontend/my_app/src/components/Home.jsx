@@ -3,7 +3,7 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import "../css/Home.css"
 import {useNavigate} from "react-router-dom"
-
+import { FaSearch } from "react-icons/fa";
 
 
 
@@ -11,6 +11,7 @@ function Home() {
   const [data, setData] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(false)
+  const [filter,setFilter]=useState('')
   const navigate=useNavigate()
 
 
@@ -22,6 +23,26 @@ function Home() {
     headers: {
       "Content-Type": "application/json",
      
+    }
+  }
+
+  const handleFilter=async ()=>{
+    
+    try {
+     
+      const response = await axios.get(`http://localhost:8080/health-records/${filter}`)
+      var newData=[]
+       newData=response.data
+      
+      if(newData.length!=0){
+      setData(response.data)
+      setLoading(false)
+      }else{
+      setError(true)
+      }
+    } catch (err) {
+      setError(true)
+      console.log(err)
     }
   }
 
@@ -60,11 +81,21 @@ function Home() {
 
 
   if(loading) return <div>Loading ........</div>
-  if(error) return <div className="error"><h1>Please Login First</h1></div>
+  if(error) return <div className="error"><h1>Not Found</h1></div>
 
   return (
-    <div className="blogparent">
-    
+<>
+<div className="search-bar">
+              <input type="text" placeholder="Search by id" className="search" onChange={(e)=>{
+                  setFilter(e.target.value)
+              }} />
+              <button className="search-button"  onClick={handleFilter}><FaSearch /></button>
+              </div>
+
+<div className="blogparent">
+   
+            
+            
                {
       data.map((ele)=>(
          <div className="blogcontainer" key={ele._id}> 
@@ -109,6 +140,9 @@ function Home() {
       
 
     </div>
+</>
+
+    
   )
 }
 
