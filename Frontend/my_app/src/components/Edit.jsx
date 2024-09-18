@@ -30,12 +30,15 @@ const navigate=useNavigate()
 
 
 
-  const config={
-    headers:{
-      "Content-Type": "application/json",
-      
-    }
-  }
+
+      const config = {
+        headers: {
+          'Content-Type': 'application/json',
+         
+        }
+        
+      };
+  
 
   const handleSubmit = async() => {
     const obj = {
@@ -46,9 +49,11 @@ const navigate=useNavigate()
       
     }
     const dat=JSON.stringify(obj)
-
+   
     try{
+     
       const response=await axios.put(`https://clinixsphere.onrender.com/health-records/${id}`,dat,config)
+    
       if(response.msg=="Not Authorized"){
         setError(true)
       }

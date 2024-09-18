@@ -66,7 +66,7 @@ function Home() {
 
   const deleteBlog=(async(id)=>{
     console.log(id)
-    const response=await  axios.delete(`http://localhost:8080/health-records/${id}`,config)
+    const response=await  axios.delete(`https://clinixsphere.onrender.com/health-records/${id}`,config)
     console.log(response)
     if(response.data.msg=="Not Authorised"){
       alert("Not Authorized")
