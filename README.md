@@ -1,4 +1,4 @@
-# ClinixSphere
+# ClinixSphere  Live Url-https://clinix-sphere-khpt.vercel.app/
 
 Clinix Sphere is a web application built using the MERN stack (MongoDB, Express.js, React.js, Node.js) that allows users to track and monitor their heart rate and blood pressure. Users can keep a detailed log of their vitals, view previous records, and update their health data over time. This tool serves as a personal health tracker.
 
