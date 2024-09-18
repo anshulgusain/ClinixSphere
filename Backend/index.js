@@ -1,11 +1,11 @@
 const express=require('express')
 const { connection } = require('./Connection/connect')
 const { HealthRecord } = require('./Models/HealthRecord')
-
+var cors = require('cors')
 
 const app=express()
 app.use(express.json())
-
+app.use(cors())
 app.get("/",(req,res)=>{
     res.send("Base Url")
 })
