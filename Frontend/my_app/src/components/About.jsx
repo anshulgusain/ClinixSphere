@@ -4,7 +4,6 @@ function About() {
   return (
     <div>
     
-Here is a sample README file for your MERN stack assignment, Clinix Sphere, where users can track their heart rate, blood pressure (BP), and keep a record of it.
 
 <h1>Clinix Sphere</h1>
 
