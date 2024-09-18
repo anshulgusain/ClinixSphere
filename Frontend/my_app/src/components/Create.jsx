@@ -41,7 +41,7 @@ console.log(date)
       // console.log(response.data)
       alert(response.data)
       if(response.data==="Records Successfully added"){
-       navigate("/home")
+       navigate("/")
       }
       
     }catch(err){
