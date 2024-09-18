@@ -30,7 +30,7 @@ function Home() {
     
     try {
      
-      const response = await axios.get(`http://localhost:8080/health-records/${filter}`)
+      const response = await axios.get(`https://clinixsphere.onrender.com/health-records/${filter}`)
       var newData=[]
        newData=response.data
       
@@ -51,7 +51,7 @@ function Home() {
     const search = async () => {
       try {
      
-        const response = await axios.get("http://localhost:8080/health-records")
+        const response = await axios.get("https://clinixsphere.onrender.com/health-records")
         
         setData(response.data)
         setLoading(false)

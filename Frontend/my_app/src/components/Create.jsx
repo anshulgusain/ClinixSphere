@@ -37,7 +37,7 @@ console.log(date)
     console.log(dat)
 
     try{
-      const response=await axios.post(`http://localhost:8080/health-records`,dat,config)
+      const response=await axios.post(`https://clinixsphere.onrender.com/health-records`,dat,config)
       // console.log(response.data)
       alert(response.data)
       if(response.data==="Records Successfully added"){

@@ -48,7 +48,7 @@ const navigate=useNavigate()
     const dat=JSON.stringify(obj)
 
     try{
-      const response=await axios.put(`http://localhost:8080/health-records/${id}`,dat,config)
+      const response=await axios.put(`https://clinixsphere.onrender.com/health-records/${id}`,dat,config)
       if(response.msg=="Not Authorized"){
         setError(true)
       }
